@@ -19,63 +19,11 @@
 \newcommand{\subtitulodoc}{Subtítulo / tema del documento}
 \newcommand{\fechadoc}{\today} %cambiar si es necesario "truchear" algo
 
-%Configuracion de hoja (margenes y tamaño)
-\geometry{a4paper,left=30mm,right=30mm,top=30mm,bottom=25mm}
-\setlength\headheight{28pt}
-
-%Metadata para pdf
-\hypersetup{
-    pdftitle={\titulodoc},
-    pdfsubject={\catedra\ - \subtitulodoc},
-    pdfauthor={\autordoc\ - \legajo\ - \curso},
-    pdfkeywords={\titulodoc\ \catedra\ \subtitulodoc\ \autordoc\ \legajo\ \curso}
-}
-
 \title{\titulodoc}
 \author{\autordoc}
 \date{\fechadoc}
 
-%formato de encabezado y pie para todas las paginas.
-\fancyhead[L]{
-    \begin{minipage}[b]{7.5mm}
-        \includegraphics[width=7mm]{imagenes/logo-utn.png}
-    \end{minipage}
-    \begin{minipage}[b]{70mm}
-        \textbf{Alumno: }\autordoc \\
-        \textbf{Legajo: }\legajo
-    \end{minipage}
-}
-\fancyhead[R]{
-    \textbf{Curso:} \curso \textbf{ - Año:} \the\year{}\\
-    \textbf{Cátedra:} \catedra
-}
-\fancyfoot[C]{} %eliminar antiguo numero de pagina
-\fancyfoot[R]{Página \thepage\ de \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
-
-%formato de encabezado y pie para la primera pagina
-\fancypagestyle{plain}{
-\fancyhead[L]{
-    \begin{minipage}[b]{7.5mm}
-        \includegraphics[width=7mm]{imagenes/logo-utn.png}
-    \end{minipage}
-    \begin{minipage}[b]{70mm}
-        \textbf{Alumno: }\autordoc \\
-        \textbf{Legajo: }\legajo
-    \end{minipage}
-}
-\fancyhead[R]{
-    \textbf{Curso:} \curso \textbf{ - Año:} \the\year{}\\
-    \textbf{Cátedra:} \catedra
-}
-\fancyfoot[C]{} %eliminar antiguo numero de pagina
-\fancyfoot[R]{Página \thepage\ de \pageref{LastPage}}
-\renewcommand{\headrulewidth}{0.5pt}
-\renewcommand{\footrulewidth}{0.5pt}
-}
-\pagestyle{fancy}
-
+\input{formato-documento.tex}
 
 %Comenzar el documento aqui.
 \begin{document}
