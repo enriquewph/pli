@@ -3,29 +3,46 @@
 
 \lstloadlanguages{C,C++,csh,Java}
 
-\definecolor{red}{rgb}{0.6,0,0} 
-\definecolor{blue}{rgb}{0,0,0.6}
-\definecolor{green}{rgb}{0,0.5,0}
-\definecolor{cyan}{rgb}{0.0,0.6,0.6}
-\definecolor{cloudwhite}{rgb}{0.9412, 0.9608, 0.8471} 
-\definecolor{davysgrey}{rgb}{0.33, 0.33, 0.33}
-\definecolor{deepfuchsia}{rgb}{0.76, 0.33, 0.76}
-\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
-\definecolor{deepsaffron}{rgb}{1.0, 0.6, 0.2}
-\definecolor{deeppink}{rgb}{1.0, 0.08, 0.58}
-\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+\definecolor{cred}{rgb}{0.6,0,0} 
+\definecolor{cblue}{rgb}{0,0,0.6}
+\definecolor{cgreen}{rgb}{0,0.5,0}
+\definecolor{ccyan}{rgb}{0.0,0.6,0.6}
+\definecolor{ccloudwhite}{rgb}{0.9412, 0.9608, 0.8471} 
+\definecolor{cdavysgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{cdeepfuchsia}{rgb}{0.76, 0.33, 0.76}
+\definecolor{cdeepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{cdeepsaffron}{rgb}{1.0, 0.6, 0.2}
+\definecolor{cdeeppink}{rgb}{1.0, 0.08, 0.58}
+\definecolor{cdodgerblue}{rgb}{0.12, 0.56, 1.0}
 
 \lstset{literate=%colorizar numeros
-   *{0}{{{\color{deepfuchsia}0}}}1
-    {1}{{{\color{deepfuchsia}1}}}1
-    {2}{{{\color{deepfuchsia}2}}}1
-    {3}{{{\color{deepfuchsia}3}}}1
-    {4}{{{\color{deepfuchsia}4}}}1
-    {5}{{{\color{deepfuchsia}5}}}1
-    {6}{{{\color{deepfuchsia}6}}}1
-    {7}{{{\color{deepfuchsia}7}}}1
-    {8}{{{\color{deepfuchsia}8}}}1
-    {9}{{{\color{deepfuchsia}9}}}1
+   *{0}{{{\color{cdeepfuchsia}0}}}1
+    {1}{{{\color{cdeepfuchsia}1}}}1
+    {2}{{{\color{cdeepfuchsia}2}}}1
+    {3}{{{\color{cdeepfuchsia}3}}}1
+    {4}{{{\color{cdeepfuchsia}4}}}1
+    {5}{{{\color{cdeepfuchsia}5}}}1
+    {6}{{{\color{cdeepfuchsia}6}}}1
+    {7}{{{\color{cdeepfuchsia}7}}}1
+    {8}{{{\color{cdeepfuchsia}8}}}1
+    {9}{{{\color{cdeepfuchsia}9}}}1
+}
+
+\lstdefinelanguage{pseudo}{
+    morekeywords = [1]{INICIO, FIN},
+    morekeywords = [2]{Imp, Leer},%i/o
+    morekeywords = [3]{Si, No, Sino, Para, Cuando, Mientras, Hacer, Que}, 
+    keywordstyle = [1]\color{cdeeppink},
+    keywordstyle = [2]\color{cdodgerblue},
+    keywordstyle = [3]\color{cblue},
+    sensitive = true,
+    morecomment = [l]{//},
+    morecomment = [s]{/*}{*/},
+    morecomment = [s]{/**}{*/},
+    commentstyle=\color{cgreen},
+    morestring = [b]",
+    morestring = [b]',
+    stringstyle=\color{cred}\ttfamily,
 }
 
 \lstset{
@@ -66,10 +83,10 @@
         double, lock, stackalloc,
         else, long, static,
         enum, namespace, string},
-    commentstyle=\color{green},
-    keywordstyle=\color{blue},
-    stringstyle=\color{red}\ttfamily,
-    numberstyle=\tiny\color{deepfuchsia},
+    commentstyle=\color{cgreen},
+    keywordstyle=\color{cblue},
+    stringstyle=\color{cred}\ttfamily,
+    numberstyle=\tiny\color{cdeepfuchsia},
     identifierstyle=\color{black},
     backgroundcolor=\color{white},
 }

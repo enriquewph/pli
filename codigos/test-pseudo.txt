@@ -1,0 +1,5 @@
+INICIO
+Imp("Este es un programa de %s en C.", PALABRA);
+Para (int i = 0; i < 5; i++) 
+    Imp("%d", i);
+FIN

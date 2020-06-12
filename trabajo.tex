@@ -25,17 +25,35 @@
 
 \input{include/formato-documento.tex}
 \input{include/source-code-formatter.tex}
+\input{include/diagramas-de-flujos.tex}
 
 %Comenzar el documento aqui.
 \begin{document}
 \maketitle
-\section{Codigo desde un archivo}
-\code{test.c}{c}{codigo1}{Un codigo hecho en C.}
+\section{Codigos}
+\subsection{Insertar codigo desde un archivo}
+\code{codigos/test.c}{c}{codigo1}{Un codigo hecho en C.}
+\subsection{Pseudocodigo}
+\code{codigos/test-pseudo.txt}{pseudo}{pseudo1}{Pseudocodigo del programa anterior.}
+\newpage
+\section{Diagramas}
+\subsection{Un diagrama de flujos}
+\vspace{2cm}
+\input{diagrama1.tex}
 
-
-
+\newpage
 \section{Texto demostrativo}
-\lipsum[1]
-\lipsum[2,6]
+\paragraph{Parrafo 1}
+\lipsum[1]\\
+\paragraph{Parrafo 2}
+\lipsum[2]\\
+\paragraph{Parrafo 3}
+\lipsum[3]\\
+\paragraph{Parrafo 4}
+\lipsum[4]\\
+\paragraph{Parrafo 5}
+\lipsum[5]\\
+\paragraph{Parrafo 6}
+\lipsum[6]\\
 
 \end{document}
