@@ -15,6 +15,7 @@ reglas = [
     ["scanf","Leer"],
     ["for ","Para "],
     ["if (","Si ("],
+    ["else","else "],
     ["else ","Sino "],
     ["while ","Mientras "],
     ["do {","Hacer {"],
@@ -84,31 +85,36 @@ def getStdioVarReplace(st, startIndex):
     return(stdioVarPlaceholder(1, text, foundspecifier, firstIndex, endIndex))
 def getVarList(st, startIndex):
     varList = []
-    firstVar = getStdioVarPlaceholder(st, startIndex)
-    if (firstVar.found == 0):
-        return(varList)
-    else:
-        lastIndex = firstVar.endIndex + 1
-        varList.append(firstVar)
-
-        while getStdioVarPlaceholder(st, lastIndex).found == 1:
-            varList.append(getStdioVarPlaceholder(st, lastIndex))
-            lastIndex = getStdioVarPlaceholder(st, lastIndex).endIndex + 1
-
+    try:
+        firstVar = getStdioVarPlaceholder(st, startIndex)
+        if (firstVar.found == 0):
+            return(varList)
+        else:
+            lastIndex = firstVar.endIndex + 1
+            varList.append(firstVar)
+    
+            while getStdioVarPlaceholder(st, lastIndex).found == 1:
+                varList.append(getStdioVarPlaceholder(st, lastIndex))
+                lastIndex = getStdioVarPlaceholder(st, lastIndex).endIndex + 1
+    except ValueError:
+        varList = []
     return(varList)
+
 def getReplaceVarList(st, startIndex):
     varList = []
-    firstVar = getStdioVarReplace(st, startIndex)
-    if (firstVar.found == 0):
-        return(varList)
-    else:
-        lastIndex = firstVar.endIndex + 1
-        varList.append(firstVar)
+    try:
+        firstVar = getStdioVarReplace(st, startIndex)
+        if (firstVar.found == 0):
+            return(varList)
+        else:
+            lastIndex = firstVar.endIndex + 1
+            varList.append(firstVar)
 
-        while getStdioVarReplace(st, lastIndex).found == 1:
-            varList.append(getStdioVarReplace(st, lastIndex))
-            lastIndex = getStdioVarReplace(st, lastIndex).endIndex + 1
-
+            while getStdioVarReplace(st, lastIndex).found == 1:
+                varList.append(getStdioVarReplace(st, lastIndex))
+                lastIndex = getStdioVarReplace(st, lastIndex).endIndex + 1
+    except ValueError:
+        varList = []
     return(varList)
 def find_between( s, first, last ):
     try:
@@ -201,15 +207,12 @@ def processtdio(src):
                 for index, var_s in enumerate(varList, start=0):
                     destvar = var_s.text
                     fromvar = "$" + str(replaceVarList[index].text)
-
                     line = line.replace(destvar, fromvar)
                     replaceTasks += destvar + " -> " + fromvar + "  "
-                
                 print(" - [Linea: " + str(i) + "] " + replaceTasks)
-
-                src_out += line + "\n"
         except ValueError:
-            src_out += line + "\n"
+            pass
+        src_out += line + "\n"
 
     print("\nCorrigiendo scanf's...")
     src_out_2 = ""
@@ -222,9 +225,9 @@ def processtdio(src):
             line = line.replace(line[scanf_string_start:scanf_string_end], "")
             line = line.replace("&", "")
             print(" - [Linea: " + str(i) + "] " + line[scanfstart:len(line)])
-            src_out_2 += line + "\n"
         except ValueError:
-            src_out_2 += line + "\n"
+            pass
+        src_out_2 += line + "\n"
     return(src_out_2)
 
 
@@ -261,6 +264,7 @@ source = delete_blanks(source)
 
 #procesar printf y scanf (stdio)
 source = processtdio(source)
+print(source)
 
 #ejecutar reglas de reemplazo simples.
 for regla in reglas:

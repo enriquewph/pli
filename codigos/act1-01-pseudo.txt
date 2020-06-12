@@ -1,0 +1,39 @@
+INICIO;
+int alumno_legajo[100];
+float alumno_promedio[100];
+char alumno_estado[100];
+int legajo, nota1, nota2;
+char leyenda;
+int contador = 0; 
+Imp("Introduzca un legajo, o un numero negativo para terminar (ej: -1): "); 
+Leer(legajo);                                                          
+Mientras (legajo > 0)
+{
+    alumno_legajo[contador] = legajo;
+    Imp("Introduzca la primera nota: ");
+    Leer(nota1);
+    Imp("Introduzca la segunda nota: ");
+    Leer(nota2);
+    alumno_promedio[contador] = (float)(nota1 + nota2) / 2.0;
+    contador = contador + 1;
+    Imp("Introduzca un legajo, o un numero negativo para terminar (ej: -1): "); 
+    Leer(legajo);                                                          
+}
+Si (contador != 0)
+{
+    Para (int i = 0; i < contador; i++)
+    {
+        Si (alumno_promedio[i] < 4)
+            leyenda = 'R';
+        Sino  Si (alumno_promedio[i] < 7)
+            leyenda = 'A';
+        Sino 
+            leyenda = 'P';
+        Imp("$alumno_legajo[i]$leyenda");
+    }
+}
+Sino 
+{
+    Imp("No se introdujo ningun dato valido.");
+}
+FIN;

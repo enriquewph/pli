@@ -1,2 +1,0 @@
-python "cpseudogen.py" %*
-pause
