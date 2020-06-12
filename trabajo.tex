@@ -2,7 +2,7 @@
 
 
 \usepackage[spanish]{babel}
-\usepackage[utf8]{inputenc}
+%\usepackage[utf8]{inputenc}
 \usepackage{lastpage}
 \usepackage{fancyhdr}
 \usepackage{geometry}
@@ -23,14 +23,19 @@
 \author{\autordoc}
 \date{\fechadoc}
 
-\input{formato-documento.tex}
+\input{include/formato-documento.tex}
+\input{include/source-code-formatter.tex}
 
 %Comenzar el documento aqui.
 \begin{document}
 \maketitle
+\section{Codigo desde un archivo}
+\code{test.c}{c}{codigo1}{Un codigo hecho en C.}
 
 
-\section{Introducción}
-\lipsum
+
+\section{Texto demostrativo}
+\lipsum[1]
+\lipsum[2,6]
 
 \end{document}

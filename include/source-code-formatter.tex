@@ -1,0 +1,88 @@
+\usepackage{color}
+\usepackage{listings} %CODE STYLE 
+
+\lstloadlanguages{C,C++,csh,Java}
+
+\definecolor{red}{rgb}{0.6,0,0} 
+\definecolor{blue}{rgb}{0,0,0.6}
+\definecolor{green}{rgb}{0,0.5,0}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{cloudwhite}{rgb}{0.9412, 0.9608, 0.8471} 
+\definecolor{davysgrey}{rgb}{0.33, 0.33, 0.33}
+\definecolor{deepfuchsia}{rgb}{0.76, 0.33, 0.76}
+\definecolor{deepskyblue}{rgb}{0.0, 0.75, 1.0}
+\definecolor{deepsaffron}{rgb}{1.0, 0.6, 0.2}
+\definecolor{deeppink}{rgb}{1.0, 0.08, 0.58}
+\definecolor{dodgerblue}{rgb}{0.12, 0.56, 1.0}
+
+\lstset{literate=%colorizar numeros
+   *{0}{{{\color{deepfuchsia}0}}}1
+    {1}{{{\color{deepfuchsia}1}}}1
+    {2}{{{\color{deepfuchsia}2}}}1
+    {3}{{{\color{deepfuchsia}3}}}1
+    {4}{{{\color{deepfuchsia}4}}}1
+    {5}{{{\color{deepfuchsia}5}}}1
+    {6}{{{\color{deepfuchsia}6}}}1
+    {7}{{{\color{deepfuchsia}7}}}1
+    {8}{{{\color{deepfuchsia}8}}}1
+    {9}{{{\color{deepfuchsia}9}}}1
+}
+
+\lstset{
+    language=csh,
+    basicstyle=\footnotesize\ttfamily,
+    numbers=left,
+    numbersep=5pt,
+    tabsize=2,
+    extendedchars=true,
+    breaklines=true,
+    frame=single,
+    showspaces=false,
+    showtabs=false,
+    xleftmargin=17pt,
+    framexleftmargin=17pt,
+    framexrightmargin=5pt,
+    framexbottommargin=4pt,
+    morecomment=[l]{//}, %use comment-line-style!
+    morecomment=[s]{/*}{*/}, %for multiline comments
+    showstringspaces=false,
+    morekeywords={ abstract, event, new, struct,
+        as, explicit, null, switch,
+        base, extern, object, this,
+        bool, false, operator, throw,
+        break, finally, out, true,
+        byte, fixed, override, try,
+        case, float, params, typeof,
+        catch, for, private, uint,
+        char, foreach, protected, ulong,
+        checked, goto, public, unchecked,
+        class, if, readonly, unsafe,
+        const, implicit, ref, ushort,
+        continue, in, return, using,
+        decimal, int, sbyte, virtual,
+        default, interface, sealed, volatile,
+        delegate, internal, short, void,
+        do, is, sizeof, while,
+        double, lock, stackalloc,
+        else, long, static,
+        enum, namespace, string},
+    commentstyle=\color{green},
+    keywordstyle=\color{blue},
+    stringstyle=\color{red}\ttfamily,
+    numberstyle=\tiny\color{deepfuchsia},
+    identifierstyle=\color{black},
+    backgroundcolor=\color{white},
+}
+
+%Nombre: codef
+%Funcion: Insertar codigo desde un archivo.
+%Parametros:
+% 1. Ruta del archivo.
+% 2. Lenguaje ej: "c"
+% 3. Etiqueta.
+% 4. Descripcion.
+\newcommand{\code}[4]{
+    \lstinputlisting[language=#2, label={#3}, caption={#4}, captionpos=b]{#1}
+}
+
+\renewcommand{\lstlistingname}{Código}% Listing -> Código
