@@ -1,31 +1,10 @@
 INICIO;
-int operacion;
-float a, b, resultado;
-Leer(operacion);
-Si (operacion == 1)
+char *str = "prueba";
+Imp("Esto es un codigo de $str");
+Para (int i = 0; i < 5; i++)
 {
-    Leer(a, b);
-    resultado = (a + b);
+    Imp("Contando... $i");
+    Si (i == 3)
+        Imp("El numero es %d:", 3)
 }
-Sino Si (operacion == 2)
-{
-    Leer(a, b);
-    resultado = (a * b);
-}
-Sino Si (operacion == 3)
-{
-    Leer(a, b);
-    resultado = (a - b);
-}
-Sino Si (operacion == 4)
-{
-    Leer(a, b);
-    resultado = (a / b);
-}
-else
-{
-    Imp("Error, $operacion no es una operacion valida.");
-    FIN; 
-}
-Imp("Resultado de la operacion: $resultado");
 FIN;

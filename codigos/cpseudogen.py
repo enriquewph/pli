@@ -231,10 +231,6 @@ def processtdio(src):
         src_out_2 += line + "\n"
     return(src_out_2)
 
-
-
-
-#---------------------------------------------------------------------------------
 #Inicializar el programa
 if len(sys.argv) != 2:
     print("Error, especifique archivo de entrada")
