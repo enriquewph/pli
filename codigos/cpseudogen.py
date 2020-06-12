@@ -23,6 +23,7 @@ reglas = [
     ["int main(void)","int main()"],
     ["int main()\n{","INICIO;"],
     ["int main(){","INICIO;"],
+    ["Sino  Si ","SinoSi "],
     ['\\' + 'n',""], #quitar \n de printfs y demas
     ["\n    ","\n"]] #quitar 1 tabulacion
 
