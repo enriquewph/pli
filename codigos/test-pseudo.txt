@@ -1,5 +1,31 @@
-INICIO
-Imp("Este es un programa de %s en C.", PALABRA);
-Para (int i = 0; i < 5; i++) 
-    Imp("%d", i);
-FIN
+INICIO;
+int operacion;
+float a, b, resultado;
+Leer(operacion);
+Si (operacion == 1)
+{
+    Leer(a, b);
+    resultado = (a + b);
+}
+Sino Si (operacion == 2)
+{
+    Leer(a, b);
+    resultado = (a * b);
+}
+Sino Si (operacion == 3)
+{
+    Leer(a, b);
+    resultado = (a - b);
+}
+Sino Si (operacion == 4)
+{
+    Leer(a, b);
+    resultado = (a / b);
+}
+else
+{
+    Imp("Error, $operacion no es una operacion valida.");
+    FIN; 
+}
+Imp("Resultado de la operacion: $resultado");
+FIN;

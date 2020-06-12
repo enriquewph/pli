@@ -24,3 +24,5 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+*.pyc
+__pycache__
