@@ -43,7 +43,7 @@
     \begin{minipage}[b]{7.5mm}
         \includegraphics[width=7mm]{imagenes/logo-utn.png}
     \end{minipage}
-    \begin{minipage}[b]{70mm}
+    \begin{minipage}[b]{85mm}
         \textbf{Alumnos: }\@footerauthor \\
         \textbf{Legajos: }\@footerlegajo
     \end{minipage}
@@ -63,37 +63,23 @@
 	{CONTENIDO}%
 }
 
-\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for horizontal lines, change thickness here
-
 \renewcommand{\maketitle}{%
     \newpage
     \thispagestyle{empty}
     
     \begin{center}
-    %------------------------------------------------
-    %	Headings
-    %------------------------------------------------
-    
-    \textsc{\LARGE \@instituto}\\[1.5cm] % Main heading such as the name of your university/college
-    
-    \vspace{12.5pt}
-    \includegraphics[width=0.25\textwidth]{imagenes/logo-utn.png} \par
-    \vspace{20pt}
 
-    \textsc{\Large \@catedra}\\[0.5cm] % Major heading such as course name
+    \textsc{\LARGE \@instituto}\\[0.5cm] 
+    \textsc{\Large \@carrera}\\[1.5cm] 
+    \includegraphics[width=0.30\textwidth]{imagenes/logo-utn.png} \par
+    \vspace{1.5cm}
     
-    %------------------------------------------------
-    %	Title
-    %------------------------------------------------
+    \textsc{\large \@catedra}\\[0.5cm]
     
-    \HRule\\[0.4cm]
+    {\huge\bfseries \@title}\\[0.4cm]
+    \textsc{\Large \@subtitledoc}\\[0.5cm]
     
-    {\huge\bfseries \@title}\\[0.4cm] % Title of your document
-    
-    \HRule\\[1.5cm]
 
-    \textsc{\large \@subtitledoc}\\[0.5cm] % Minor heading such as course title
-    
     \end{center}
 
     \vspace{2cm}
