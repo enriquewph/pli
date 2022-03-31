@@ -1,51 +1,42 @@
-\documentclass[12pt,a4paper,oneside]{article}
+\input{include/estructura.tex}
+%\input{include/varios/source-code-formatter.tex}
+%\input{include/varios/diagramas-de-flujos.tex}
 
+\instituto{Universidad Tecnológica Nacional\\Facultad Regional Córdoba}
+\carrera{Ingeniería Electrónica}
 
-\usepackage[spanish]{babel}
-%\usepackage[utf8]{inputenc}
+\title{Este es el título del documento}
+\subtitledoc{Subtítulo / tema del documento}
+
+\professor{XXXXXXXXXX XXXXXXXX}
+\catedra{XXXXX XXXXXXXXXX}
+\curso{XRX}
+\author{XXXXX XXXXX, XXXXX XXXXX.  \par XXXXX XXXXX, XXXXX XXXXX.}
+\footerauthor{XXXXX, XXXXX}
+\legajo{XXXXX \par XXXXX}
+\footerlegajo{XXXXX, XXXXX}
+\date{\the\year}
 
 \usepackage{lipsum}
 
-\newcommand{\instituto}{Universidad Tecnológica Nacional\\Facultad Regional Córdoba}
-\newcommand{\carrera}{Ingeniería Electrónica}
-\newcommand{\autordoc}{NOMBRE}
-\newcommand{\legajo}{LEGAJO}
-\newcommand{\curso}{CURSO}
-\newcommand{\catedra}{CATEDRA}
-\newcommand{\titulodoc}{Este es el título del documento}
-\newcommand{\subtitulodoc}{Subtítulo / tema del documento}
-\newcommand{\fechadoc}{\the\year}
-
-\title{\titulodoc}
-\author{\autordoc}
-\date{\fechadoc}
-
-\input{include/formato-documento.tex}
-\input{include/source-code-formatter.tex}
-\input{include/diagramas-de-flujos.tex}
-\input{include/titlepage.tex}
-
 %Comenzar el documento aqui.
 \begin{document}
+    \maketitle
+    \tableofcontents
+    \newpage
 
-
-
-\titlepg %Insertar pagina de titulo.
-%\maketitle
-
-\section{Texto demostrativo}
-\paragraph{Parrafo 1}
-\lipsum[1]\\
-\paragraph{Parrafo 2}
-\lipsum[2]\\
-\paragraph{Parrafo 3}
-\lipsum[3]\\
-\paragraph{Parrafo 4}
-\lipsum[4]\\
-\paragraph{Parrafo 5}
-\lipsum[5]\\
-\paragraph{Parrafo 6}
-\lipsum[6]\\
-
+    \section{Texto demostrativo}
+    \paragraph{Parrafo 1}
+    \lipsum[1]\\
+    \paragraph{Parrafo 2}
+    \lipsum[2]\\
+    \paragraph{Parrafo 3}
+    \lipsum[3]\\
+    \paragraph{Parrafo 4}
+    \lipsum[4]\\
+    \paragraph{Parrafo 5}
+    \lipsum[5]\\
+    \paragraph{Parrafo 6}
+    \lipsum[6]\\
 
 \end{document}
