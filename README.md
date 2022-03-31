@@ -3,18 +3,28 @@ Plantilla LaTeX para trabajos simples UTN
 
 CONFIGURACION DEL DOCUMENTO:
 
-\newcommand{\autordoc}{NOMBRE}
+\instituto{Universidad Tecnológica Nacional\\Facultad Regional Córdoba}
 
-\newcommand{\legajo}{LEGAJO}
+\carrera{Ingeniería Electrónica}
 
-\newcommand{\curso}{CURSO}
+\title{Este es el título del documento}
 
-\newcommand{\catedra}{CATEDRA}
+\subtitledoc{Subtítulo / tema del documento}
 
-\newcommand{\titulodoc}{Este es el título del documento}
+\professor{XXXXXXXXXX XXXXXXXX}
 
-\newcommand{\subtitulodoc}{Subtítulo / tema del documento}
+\catedra{XXXXXXXXXX}
 
-\newcommand{\fechadoc}{\today}
+\curso{XRX}
 
-Para cambiar tamaño de hoja, o margenes ver el archivo "formato-documento.tex"
+\author{XXXXX XXXXX, XXXXX XXXXX.  \par XXXXX XXXXX, XXXXX XXXXX.}
+
+\legajo{XXXXX \par XXXXX}
+
+\footerauthor{XXXXX, XXXXX}
+
+\footerlegajo{XXXXX, XXXXX}
+
+\date{\the\year}
+
+Para cambiar tamaño de hoja, o margenes ver el archivo "estructura.tex"
